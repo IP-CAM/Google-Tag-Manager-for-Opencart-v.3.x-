@@ -1,0 +1,323 @@
+{{ header }}
+{{ column_left }}
+<div id="content">
+  <div class="page-header">
+    <div class="container-fluid">
+      <div class="pull-right">
+        <button type="submit" form="form-analytics" data-toggle="tooltip" title="{{ button_save }}" class="btn btn-primary"><i class="fa fa-save"></i></button>
+        <a href="{{ cancel }}" data-toggle="tooltip" title="{{ button_cancel }}" class="btn btn-default"><i class="fa fa-reply"></i></a></div>
+      <h1>{{ heading_title }}</h1>
+      <ul class="breadcrumb">
+        {% for breadcrumb in breadcrumbs %}
+        <li><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="container-fluid">
+    {% if error_warning %}
+    <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </div>
+    {% endif %}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-pencil"></i> {{ text_edit }}</h3>
+      </div>
+      <div class="panel-body">
+        <form action="{{ action }}" method="post" enctype="multipart/form-data" id="form-analytics" class="form-horizontal">
+
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab-general" data-toggle="tab">{{ tab_general }}</a></li>
+            <li><a href="#tab-gcm" data-toggle="tab">{{ tab_gcm }}</a></li>
+            <li><a href="#tab-support" data-toggle="tab">{{ tab_help_and_support }}</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab-general">
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-status">{{ entry_status }}</label>
+								<div class="col-sm-10">
+									<select name="analytics_ps_gtm_status" id="input-status" class="form-control">
+										{% if analytics_ps_gtm_status %}
+										<option value="1" selected="selected">{{ text_enabled }}</option>
+										<option value="0">{{ text_disabled }}</option>
+										{% else %}
+										<option value="1">{{ text_enabled }}</option>
+										<option value="0" selected="selected">{{ text_disabled }}</option>
+										{% endif %}
+									</select>
+								</div>
+							</div>
+
+							<div class="form-group required">
+                <label class="col-sm-2 control-label" for="input-gtm-id">{{ entry_gtm_id }}</label>
+                <div class="col-sm-10">
+                  <input type="text" name="analytics_ps_gtm_gtm_id" value="{{ analytics_ps_gtm_gtm_id }}" placeholder="{{ entry_gtm_id }}" id="input-gtm-id" class="form-control" />
+									{% if error_gtm_id %}
+									<div class="text-danger">{{ error_gtm_id }}</div>
+									{% endif %}
+									<div class="help-block text-muted">{{ help_gtm_id_locate }}</div>
+                </div>
+              </div>
+
+            </div>
+						<div class="tab-pane" id="tab-gcm">
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-gcm-status">{{ entry_gcm_status }}</label>
+								<div class="col-sm-10">
+									<select name="analytics_ps_gtm_gcm_status" id="input-gcm-status" class="form-control">
+										{% if analytics_ps_gtm_gcm_status %}
+										<option value="1" selected="selected">{{ text_enabled }}</option>
+										<option value="0">{{ text_disabled }}</option>
+										{% else %}
+										<option value="1">{{ text_enabled }}</option>
+										<option value="0" selected="selected">{{ text_disabled }}</option>
+										{% endif %}
+									</select>
+									<div class="help-block text-muted">{{ help_gcm_status }}</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label" for="input-gcm-profiles">{{ entry_gcm_profiles }}</label>
+								<div class="col-sm-10">
+									<select name="analytics_ps_gtm_gcm_profiles" id="input-gcm-profiles" class="form-control">
+										<option value="0"{% if analytics_ps_gtm_gcm_profiles == 0 %} selected{% endif %}>{{ entry_custom }}</option>
+										<option value="1"{% if analytics_ps_gtm_gcm_profiles == 1 %} selected{% endif %}>{{ entry_strict }}</option>
+										<option value="2"{% if analytics_ps_gtm_gcm_profiles == 2 %} selected{% endif %}>{{ entry_balanced }}</option>
+									</select>
+								</div>
+							</div>
+
+							<fieldset id="ad-settings-group">
+								<legend>{{ text_group_ad_settings }}</legend>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-ad-storage">{{ entry_ad_storage }}</label>
+									<div class="col-sm-10">
+										<select name="analytics_ps_gtm_ad_storage" id="input-ad-storage" class="form-control">
+											{% if analytics_ps_gtm_ad_storage %}
+											<option value="1" selected="selected">{{ text_enabled }}</option>
+											<option value="0">{{ text_disabled }}</option>
+											{% else %}
+											<option value="1">{{ text_enabled }}</option>
+											<option value="0" selected="selected">{{ text_disabled }}</option>
+											{% endif %}
+										</select>
+										<div class="help-block text-muted">{{ help_ad_storage }}</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-ad-user-data">{{ entry_ad_user_data }}</label>
+									<div class="col-sm-10">
+										<select name="analytics_ps_gtm_ad_user_data" id="input-ad-user-data" class="form-control">
+											{% if analytics_ps_gtm_ad_user_data %}
+											<option value="1" selected="selected">{{ text_enabled }}</option>
+											<option value="0">{{ text_disabled }}</option>
+											{% else %}
+											<option value="1">{{ text_enabled }}</option>
+											<option value="0" selected="selected">{{ text_disabled }}</option>
+											{% endif %}
+										</select>
+										<div class="help-block text-muted">{{ help_ad_user_data }}</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-ad-personalization">{{ entry_ad_personalization }}</label>
+									<div class="col-sm-10">
+										<select name="analytics_ps_gtm_ad_personalization" id="input-ad-personalization" class="form-control">
+											{% if analytics_ps_gtm_ad_personalization %}
+											<option value="1" selected="selected">{{ text_enabled }}</option>
+											<option value="0">{{ text_disabled }}</option>
+											{% else %}
+											<option value="1">{{ text_enabled }}</option>
+											<option value="0" selected="selected">{{ text_disabled }}</option>
+											{% endif %}
+										</select>
+										<div class="help-block text-muted">{{ help_ad_personalization }}</div>
+									</div>
+								</div>
+
+							</fieldset>
+
+							<fieldset id="analytics-settings-group">
+								<legend>{{ text_group_analytics_settings }}</legend>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-analytics-storage">{{ entry_analytics_storage }}</label>
+									<div class="col-sm-10">
+										<select name="analytics_ps_gtm_analytics_storage" id="input-analytics-storage" class="form-control">
+											{% if analytics_ps_gtm_analytics_storage %}
+											<option value="1" selected="selected">{{ text_enabled }}</option>
+											<option value="0">{{ text_disabled }}</option>
+											{% else %}
+											<option value="1">{{ text_enabled }}</option>
+											<option value="0" selected="selected">{{ text_disabled }}</option>
+											{% endif %}
+										</select>
+										<div class="help-block text-muted">{{ help_analytics_storage }}</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-functionality-storage">{{ entry_functionality_storage }}</label>
+									<div class="col-sm-10">
+										<select name="analytics_ps_gtm_functionality_storage" id="input-functionality-storage" class="form-control">
+											{% if analytics_ps_gtm_functionality_storage %}
+											<option value="1" selected="selected">{{ text_enabled }}</option>
+											<option value="0">{{ text_disabled }}</option>
+											{% else %}
+											<option value="1">{{ text_enabled }}</option>
+											<option value="0" selected="selected">{{ text_disabled }}</option>
+											{% endif %}
+										</select>
+										<div class="help-block text-muted">{{ help_functionality_storage }}</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-personalization-storage">{{ entry_personalization_storage }}</label>
+									<div class="col-sm-10">
+										<select name="analytics_ps_gtm_personalization_storage" id="input-personalization-storage" class="form-control">
+											{% if analytics_ps_gtm_personalization_storage %}
+											<option value="1" selected="selected">{{ text_enabled }}</option>
+											<option value="0">{{ text_disabled }}</option>
+											{% else %}
+											<option value="1">{{ text_enabled }}</option>
+											<option value="0" selected="selected">{{ text_disabled }}</option>
+											{% endif %}
+										</select>
+										<div class="help-block text-muted">{{ help_personalization_storage }}</div>
+									</div>
+								</div>
+
+							</fieldset>
+
+							<fieldset id="security-settings-group">
+								<legend>{{ text_group_security_settings }}</legend>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-security-storage">{{ entry_security_storage }}</label>
+									<div class="col-sm-10">
+										<select name="analytics_ps_gtm_security_storage" id="input-security-storage" class="form-control">
+											{% if analytics_ps_gtm_security_storage %}
+											<option value="1" selected="selected">{{ text_enabled }}</option>
+											<option value="0">{{ text_disabled }}</option>
+											{% else %}
+											<option value="1">{{ text_enabled }}</option>
+											<option value="0" selected="selected">{{ text_disabled }}</option>
+											{% endif %}
+										</select>
+										<div class="help-block text-muted">{{ help_security_storage }}</div>
+									</div>
+								</div>
+
+							</fieldset>
+
+							<fieldset>
+								<legend>{{ text_group_advanced_settings }}</legend>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-wait-for-update">{{ entry_wait_for_update }}</label>
+									<div class="col-sm-10">
+										<input type="number" min="0" max="10000" name="analytics_ps_gtm_wait_for_update" value="{{ analytics_ps_gtm_wait_for_update | default('0') }}" placeholder="{{ entry_wait_for_update }}" id="input-wait-for-update" class="form-control" />
+										{% if error_wait_for_update %}
+										<div class="text-danger">{{ error_wait_for_update }}</div>
+										{% endif %}
+										<div class="help-block text-muted">{{ help_wait_for_update }}</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-ads-data-redaction">{{ entry_ads_data_redaction }}</label>
+									<div class="col-sm-10">
+										<select name="analytics_ps_gtm_ads_data_redaction" id="input-ads-data-redaction" class="form-control">
+											{% if analytics_ps_gtm_ads_data_redaction %}
+											<option value="1" selected="selected">{{ text_enabled }}</option>
+											<option value="0">{{ text_disabled }}</option>
+											{% else %}
+											<option value="1">{{ text_enabled }}</option>
+											<option value="0" selected="selected">{{ text_disabled }}</option>
+											{% endif %}
+										</select>
+										<div class="help-block text-muted">{{ help_ads_data_redaction }}</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label class="col-sm-2 control-label" for="input-url-passthrough">{{ entry_url_passthrough }}</label>
+									<div class="col-sm-10">
+										<select name="analytics_ps_gtm_url_passthrough" id="input-url-passthrough" class="form-control">
+											{% if analytics_ps_gtm_url_passthrough %}
+											<option value="1" selected="selected">{{ text_enabled }}</option>
+											<option value="0">{{ text_disabled }}</option>
+											{% else %}
+											<option value="1">{{ text_enabled }}</option>
+											<option value="0" selected="selected">{{ text_disabled }}</option>
+											{% endif %}
+										</select>
+										<div class="help-block text-muted">{{ help_url_passthrough }}</div>
+									</div>
+								</div>
+
+							</fieldset>
+
+						</div>
+						<div class="tab-pane" id="tab-support">
+
+							<h3>{{ heading_getting_started }}</h3>
+							{{ text_getting_started }}
+							<hr />
+							<h3>{{ heading_setup }}</h3>
+							{{ text_setup }}
+							<hr />
+							<h3>{{ heading_troubleshot }}</h3>
+							{{ text_troubleshot }}
+							<hr />
+							<h3>{{ heading_faq }}</h3>
+							{{ text_faq }}
+							<hr />
+							<h3>{{ heading_contact }}</h3>
+							{{ text_contact }}
+
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+	var inputs = $('#ad-settings-group select, #analytics-settings-group select, #security-settings-group select');
+
+	$('#input-gcm-profiles').on('change', function () {
+		inputs.each(function () {
+			$(this).prop('selectedIndex', 1);
+		});
+
+		var selectedValue = $(this).val();
+
+		if (selectedValue === '1') { // Strict
+			$('#input-functionality-storage').prop('selectedIndex', 0);
+			$('#input-personalization-storage').prop('selectedIndex', 0);
+			$('#input-security-storage').prop('selectedIndex', 0);
+		} else if (selectedValue === '2') { // Balanced
+			$('#input-ad-storage').prop('selectedIndex', 0);
+			$('#input-ad-user-data').prop('selectedIndex', 0);
+			$('#input-analytics-storage').prop('selectedIndex', 0);
+			$('#input-functionality-storage').prop('selectedIndex', 0);
+			$('#input-personalization-storage').prop('selectedIndex', 0);
+			$('#input-security-storage').prop('selectedIndex', 0);
+		}
+	});
+
+	inputs.on('change', function () {
+		$('#input-gcm-profiles option:first').prop('selected', true);
+	});
+</script>
+{{ footer }}

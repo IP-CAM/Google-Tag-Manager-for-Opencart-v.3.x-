@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is part of "Playful Sparkle - Google Tag Manager" project and subject to the terms
+and conditions defined in file "LICENSE", which is part of this source
+code package and also available on the project page: https://github.com/playfulsparkle/oc3_gtm.git
+-->
+<modification>
+    <name>Playful Sparkle - Google Tag Manager</name>
+    <code>ps_gtm</code>
+    <version>1.0.0</version>
+    <author>Playful Sparkle</author>
+    <link>https://github.com/playfulsparkle/oc3_gtm.git</link>
+    <file path="catalog/controller/common/header.php">
+        <operation>
+            <search position="after"><![CDATA[$data['analytics'] = array();]]></search>
+            <add><![CDATA[
+$data['ps_gtm_status'] = $this->config->get('analytics_ps_gtm_status');
+$data['ps_gtm_gtm_id'] = $this->config->get('analytics_ps_gtm_gtm_id');
+            ]]></add>
+        </operation>
+    </file>
+    <file path="catalog/view/theme/default/template/common/header.twig">
+        <operation>
+            <search><![CDATA[<body>]]></search>
+            <add position="after"><![CDATA[{% if ps_gtm_status %}<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id={{ ps_gtm_gtm_id }}" height="0" width="0" style="display:none; visibility:hidden;"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->{% endif %}]]></add>
+        </operation>
+    </file>
+</modification>
