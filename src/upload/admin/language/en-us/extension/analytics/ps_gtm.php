@@ -27,7 +27,7 @@ $_['text_faq']                      = '<details><summary>What if I don’t see m
 <details><summary>How can I check if the extension is working?</summary>Utilize the <a href="https://tagassistant.google.com/" target="_blank" rel="noopener noreferrer">Google Tag Assistant</a> Chrome extension or the preview mode in Google Tag Manager to confirm that your tags are firing as expected.</details>
 <details><summary>Is this extension compatible with other extensions?</summary>While this extension is generally compatible, it is advisable to test it with other extensions installed on your site to avoid conflicts. If you encounter issues, check for known compatibility problems.</details>
 <details><summary>How do I troubleshoot common tag issues?</summary>Refer to the Google Tag Manager troubleshooting guide for help with common tag issues and best practices for configuration.</details>';
-$_['text_contact']                 = '<p>For further assistance, please reach out to our support team:</p><ul><li><strong>Contact:</strong> <a href="mailto:%s">%s</a></li><li><strong>Documentation:</strong> <a href="https://github.com/playfulsparkle/oc4_google_tag_manager" target="_blank" rel="noopener noreferrer">User Documentation</a></li></ul>';
+$_['text_contact']                 = '<p>For further assistance, please reach out to our support team:</p><ul><li><strong>Contact:</strong> <a href="mailto:%s">%s</a></li><li><strong>Documentation:</strong> <a href="%s" target="_blank" rel="noopener noreferrer">User Documentation</a></li></ul>';
 
 // Tab
 $_['tab_general']                   = 'General';

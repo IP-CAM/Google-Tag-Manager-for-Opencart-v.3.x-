@@ -27,7 +27,7 @@ $_['text_faq']                      = '<details><summary>Was ist, wenn ich meine
 <details><summary>Wie kann ich überprüfen, ob die Erweiterung funktioniert?</summary>Verwenden Sie die <a href="https://tagassistant.google.com/" target="_blank" rel="noopener noreferrer">Google Tag Assistant</a>-Chrome-Erweiterung oder den Vorschau-Modus im Google Tag Manager, um zu bestätigen, dass Ihre Tags wie erwartet ausgelöst werden.</details>
 <details><summary>Ist diese Erweiterung mit anderen Erweiterungen kompatibel?</summary>Diese Erweiterung ist im Allgemeinen kompatibel, es wird jedoch empfohlen, sie mit anderen auf Ihrer Website installierten Erweiterungen zu testen, um Konflikte zu vermeiden. Wenn Sie auf Probleme stoßen, überprüfen Sie bekannte Kompatibilitätsprobleme.</details>
 <details><summary>Wie behebe ich häufige Tag-Probleme?</summary>Verweisen Sie auf den Leitfaden zur Fehlersuche im Google Tag Manager, um Hilfe bei häufigen Tag-Problemen und bewährten Praktiken für die Konfiguration zu erhalten.</details>';
-$_['text_contact']                 = '<p>Für weitere Unterstützung wenden Sie sich bitte an unser Support-Team:</p><ul><li><strong>Kontakt:</strong> <a href="mailto:%s">%s</a></li><li><strong>Dokumentation:</strong> <a href="https://github.com/playfulsparkle/oc4_google_tag_manager" target="_blank" rel="noopener noreferrer">Benutzerdokumentation</a></li></ul>';
+$_['text_contact']                 = '<p>Für weitere Unterstützung wenden Sie sich bitte an unser Support-Team:</p><ul><li><strong>Kontakt:</strong> <a href="mailto:%s">%s</a></li><li><strong>Dokumentation:</strong> <a href="%s" target="_blank" rel="noopener noreferrer">Benutzerdokumentation</a></li></ul>';
 
 // Tab
 $_['tab_general']                   = 'Allgemein';

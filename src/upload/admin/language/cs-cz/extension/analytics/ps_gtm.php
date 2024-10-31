@@ -27,7 +27,7 @@ $_['text_faq']                      = '<details><summary>Co dělat, když se mi 
 <details><summary>Jak mohu zkontrolovat, zda rozšíření funguje?</summary>Využijte rozšíření <a href="https://tagassistant.google.com/" target="_blank" rel="noopener noreferrer">Google Tag Assistant</a> pro Chrome nebo režim náhledu v Google Tag Manageru, abyste potvrdili, že se vaše značky spouští, jak očekáváte.</details>
 <details><summary>Je toto rozšíření kompatibilní s jinými rozšířeními?</summary>I když je toto rozšíření obecně kompatibilní, doporučuje se otestovat ho s jinými rozšířeními nainstalovanými na vašem webu, abyste se vyhnuli konfliktům. Pokud narazíte na problémy, zkontrolujte známé problémy s kompatibilitou.</details>
 <details><summary>Jak řešit běžné problémy se značkami?</summary>Odkazujte na příručku pro řešení problémů Google Tag Manager pro pomoc s běžnými problémy se značkami a nejlepšími postupy pro konfiguraci.</details>';
-$_['text_contact']                 = '<p>Pro další pomoc se prosím obraťte na náš tým podpory:</p><ul><li><strong>Kontakt:</strong> <a href="mailto:%s">%s</a></li><li><strong>Dokumentace:</strong> <a href="https://github.com/playfulsparkle/oc4_google_tag_manager" target="_blank" rel="noopener noreferrer">Dokumentace pro uživatele</a></li></ul>';
+$_['text_contact']                 = '<p>Pro další pomoc se prosím obraťte na náš tým podpory:</p><ul><li><strong>Kontakt:</strong> <a href="mailto:%s">%s</a></li><li><strong>Dokumentace:</strong> <a href="%s" target="_blank" rel="noopener noreferrer">Dokumentace pro uživatele</a></li></ul>';
 
 // Tab
 $_['tab_general']                   = 'Obecné';
