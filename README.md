@@ -1,6 +1,6 @@
 # Playful Sparkle - Google Tag Manager for OpenCart 3
 
-The **Playful Sparkle - Google Tag Manager** extension streamlines the integration of Google Tag Manager (GTM) with your OpenCart 3 store. By simply entering your GTM ID and enabling the module, you unlock a powerful tool for managing all your website's tags without directly altering your site’s code.
+The **Playful Sparkle - Google Tag Manager** extension streamlines the integration of Google Tag Manager (GTM) with your OpenCart 3.x store. By simply entering your GTM ID and enabling the module, you unlock a powerful tool for managing all your website's tags without directly altering your site’s code.
 
 ### What is Google Tag Manager?
 Google Tag Manager is a tag management system that allows you to quickly and easily update tags and code snippets on your website or mobile app. Tags are small pieces of code, often JavaScript, that send data to third parties like Google Analytics, Google Ads, Facebook Pixel, and other analytics and marketing platforms. GTM simplifies adding, editing, and managing these tags without needing developer support each time a change is required.
@@ -22,7 +22,7 @@ Google Tag Manager is a tag management system that allows you to quickly and eas
 - **Reduced Developer Dependency**:
   - Once GTM is integrated, non-developers (like marketers) can create, edit, and manage tags independently. This speeds up tag deployment for marketing campaigns and frees up developer resources for other tasks.
 
-With the **Playful Sparkle - Google Tag Manager** extension, OpenCart 3 store owners can easily leverage the full capabilities of GTM to enhance analytics, streamline tag management, and support data-driven marketing initiatives.
+With the **Playful Sparkle - Google Tag Manager** extension, OpenCart 3.x store owners can easily leverage the full capabilities of GTM to enhance analytics, streamline tag management, and support data-driven marketing initiatives.
 
 ## Installation Instructions
 
@@ -51,3 +51,15 @@ Download the latest **Playful Sparkle - Google Tag Manager** release from this r
 ## Support & Feedback
 
 For support or any inquiries regarding the extension, feel free to open an issue on this repository or reach out via email at [support@playfulsparkle.com](mailto:support@playfulsparkle.com).
+
+---
+
+## License
+
+This project is licensed under the GPL-3.0 license. See the [LICENSE](./LICENSE) file for more information.
+
+---
+
+## Contributing
+
+We welcome contributions! If you would like to contribute to this project, please fork the repository and submit a pull request with your changes.
