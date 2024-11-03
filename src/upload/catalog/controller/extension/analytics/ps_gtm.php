@@ -20,35 +20,34 @@ class ControllerExtensionAnalyticsPsGtm extends Controller
         $ads_data_redaction = (bool) $this->config->get('analytics_ps_gtm_ads_data_redaction');
         $url_passthrough = (bool) $this->config->get('analytics_ps_gtm_url_passthrough');
 
-        $gcm_options = [
-            'ad_storage' => $ad_storage ? 'granted' : 'denied',
-            'ad_user_data' => $ad_user_data ? 'granted' : 'denied',
-            'ad_personalization' => $ad_personalization ? 'granted' : 'denied',
-            'analytics_storage' => $analytics_storage ? 'granted' : 'denied',
-            'functionality_storage' => $functionality_storage ? 'granted' : 'denied',
-            'personalization_storage' => $personalization_storage ? 'granted' : 'denied',
-            'security_storage' => $security_storage ? 'granted' : 'denied',
-        ];
-
-        if ($wait_for_update > 0) {
-            $gcm_options['wait_for_update'] = $wait_for_update;
-        }
-
-        $html = '<script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }';
+        $html = '';
 
         if ($gcm_status) {
-            $html .= '
-            gtag("consent", "default", ' . json_encode($gcm_options, JSON_PRETTY_PRINT) . ');';
+            $gcm_options = [
+                'ad_storage' => $ad_storage ? 'granted' : 'denied',
+                'ad_user_data' => $ad_user_data ? 'granted' : 'denied',
+                'ad_personalization' => $ad_personalization ? 'granted' : 'denied',
+                'analytics_storage' => $analytics_storage ? 'granted' : 'denied',
+                'functionality_storage' => $functionality_storage ? 'granted' : 'denied',
+                'personalization_storage' => $personalization_storage ? 'granted' : 'denied',
+                'security_storage' => $security_storage ? 'granted' : 'denied',
+            ];
+
+            if ($wait_for_update > 0) {
+                $gcm_options['wait_for_update'] = $wait_for_update;
+            }
+
+            $html .= '<script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+
+                gtag("consent", "default", ' . json_encode($gcm_options, JSON_PRETTY_PRINT) . ');
+                gtag("set", "ads_data_redaction", ' . ($ads_data_redaction ? 'true' : 'false') . ');
+                gtag("set", "url_passthrough", ' . ($url_passthrough ? 'true' : 'false') . ');
+            </script>';
         }
 
         $html .= '
-        gtag("set", "ads_data_redaction", ' . ($ads_data_redaction ? 'true' : 'false') . ');
-        gtag("set", "url_passthrough", ' . ($url_passthrough ? 'true' : 'false') . ');';
-
-        $html .= '
-        </script>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.start\':
         new Date().getTime(),event:\'gtm.js\'});var f=d.getElementsByTagName(s)[0],
