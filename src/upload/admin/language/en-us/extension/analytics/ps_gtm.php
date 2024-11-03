@@ -57,7 +57,7 @@ $_['help_wait_for_update']          = 'Sets the time (in milliseconds) to delay 
 $_['help_ads_data_redaction']       = 'Redacts user data related to ads, ensuring privacy by hiding certain identifiable information.';
 $_['help_url_passthrough']          = 'Allows the URL to pass through consent checks, useful for tracking specific user paths without storing personal data.';
 $_['help_gcm_status']               = 'Enables Google Consent Mode, allowing your site to adjust Google tags behavior based on user consent settings. This mode provides privacy-friendly tracking, allowing for analytics and ads to function in compliance with consent preferences.';
-$_['help_gtm_id_locate']            = 'To find your Google Tag Manager ID, log in to your <a href="https://tagmanager.google.com" target="_blank" rel="external noopener noreferrer">Google Tag Manager account</a>. In the workspace, look for the ID at the top of the dashboard—it starts with "GTM-" followed by a unique series of letters and numbers, such as "GTM-XXXXXXX".';
+$_['help_gtm_id_locate']            = 'To find your Google Tag Manager ID, log in to your <a href="https://tagmanager.google.com" target="_blank" rel="external noopener noreferrer">Google Tag Manager account</a>. In the workspace, look for the ID at the top of the dashboard—it starts with "GTM-" followed by a unique series of letters and numbers, such as "GTM-XXXXXXX". <a href="https://support.google.com/analytics/answer/12270356?hl=en" target="_blank" rel="external noopener noreferrer">More detailed instructions here</a>.';
 
 // Error
 $_['error_permission']              = 'Warning: You do not have permission to modify Google Tag Manager settings!';

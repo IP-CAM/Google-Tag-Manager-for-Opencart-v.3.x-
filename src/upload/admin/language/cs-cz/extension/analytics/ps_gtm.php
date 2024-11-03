@@ -57,7 +57,7 @@ $_['help_wait_for_update']          = 'Nastaví čas (v milisekundách), který 
 $_['help_ads_data_redaction']       = 'Rediguje uživatelská data související s reklamami a zajišťuje ochranu soukromí skrytím určitých identifikovatelných informací.';
 $_['help_url_passthrough']          = 'Umožňuje URL projít kontrolami souhlasu, což je užitečné pro sledování specifických uživatelských cest bez ukládání osobních údajů.';
 $_['help_gcm_status']               = 'Povoluje režim Google Consent, což umožňuje vaší stránce přizpůsobit chování Google značek na základě nastavení souhlasu uživatelů. Tento režim poskytuje sledování šetrné k ochraně soukromí a umožňuje, aby analytika a reklamy fungovaly v souladu s preferencemi souhlasu.';
-$_['help_gtm_id_locate']            = 'Chcete-li najít své ID Google Tag Manageru, přihlaste se do svého <a href="https://tagmanager.google.com" target="_blank" rel="external noopener noreferrer">účtu Google Tag Manager</a>. V pracovním prostoru hledejte ID na vrchu panelu - začíná "GTM-" následovaným unikátní sérií písmen a číslic, například "GTM-XXXXXXX".';
+$_['help_gtm_id_locate']            = 'Chcete-li najít své ID Google Tag Manageru, přihlaste se do svého <a href="https://tagmanager.google.com" target="_blank" rel="external noopener noreferrer">účtu Google Tag Manager</a>. V pracovním prostoru hledejte ID na vrchu panelu - začíná "GTM-" následovaným unikátní sérií písmen a číslic, například "GTM-XXXXXXX". <a href="https://support.google.com/analytics/answer/12270356?hl=cs" target="_blank" rel="external noopener noreferrer">Podrobnější pokyny naleznete zde</a>.';
 
 // Error
 $_['error_permission']              = 'Upozornění: Nemáte oprávnění upravovat nastavení Google Tag Manageru!';
