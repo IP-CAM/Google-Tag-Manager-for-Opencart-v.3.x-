@@ -187,10 +187,12 @@ class ControllerExtensionAnalyticsPsGtm extends Controller
             $this->error['warning'] = $this->language->get('error_permission');
         }
 
-        if (!isset($this->request->post['analytics_ps_gtm_gtm_id'])) {
-            $this->error['gtm_id'] = $this->language->get('error_gtm_id');
-        } elseif (preg_match('/^GTM-[A-Z0-9]+$/', $this->request->post['analytics_ps_gtm_gtm_id']) !== 1) {
-            $this->error['gtm_id'] = $this->language->get('error_gtm_id_invalid');
+        if (!$this->error) {
+            if (!isset($this->request->post['analytics_ps_gtm_gtm_id'])) {
+                $this->error['gtm_id'] = $this->language->get('error_gtm_id');
+            } elseif (preg_match('/^GTM-[A-Z0-9]+$/', $this->request->post['analytics_ps_gtm_gtm_id']) !== 1) {
+                $this->error['gtm_id'] = $this->language->get('error_gtm_id_invalid');
+            }
         }
 
         return !$this->error;
