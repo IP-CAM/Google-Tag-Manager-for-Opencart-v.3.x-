@@ -23,6 +23,20 @@ Key Benefits of Using Google Tag Manager:
 
 With the Playful Sparkle - Google Tag Manager extension, OpenCart 3.x store owners can easily leverage the full capabilities of GTM to enhance analytics, streamline tag management, and support data-driven marketing initiatives.
 
+Features
+
+- Multilingual Support: The extension is available in the following languages:
+  - Čeština (cs-cz)
+  - Deutsch (de-de)
+  - English (GB) (en-gb)
+  - English (US) (en-us)
+  - Español (es-es)
+  - Français (fr-fr)
+  - Magyar (hu-hu)
+  - Italiano (it-it)
+  - Русский (ru-ru)
+  - Slovenčina (sk-sk)
+
 For more information, visit the extension GitHub page at https://github.com/playfulsparkle/oc3_gtm.git.
 
 Demo frontend - https://opencart3.playfulsparkle.com/

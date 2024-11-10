@@ -24,6 +24,20 @@ Google Tag Manager is a tag management system that allows you to quickly and eas
 
 With the **Playful Sparkle - Google Tag Manager** extension, OpenCart 3.x store owners can easily leverage the full capabilities of GTM to enhance analytics, streamline tag management, and support data-driven marketing initiatives.
 
+## Features
+
+- **Multilingual Support**: The extension is available in the following languages:
+  - Čeština (cs-cz)
+  - Deutsch (de-de)
+  - English (GB) (en-gb)
+  - English (US) (en-us)
+  - Español (es-es)
+  - Français (fr-fr)
+  - Magyar (hu-hu)
+  - Italiano (it-it)
+  - Русский (ru-ru)
+  - Slovenčina (sk-sk)
+
 ## Installation Instructions
 
 ### 1. Download the Extension
