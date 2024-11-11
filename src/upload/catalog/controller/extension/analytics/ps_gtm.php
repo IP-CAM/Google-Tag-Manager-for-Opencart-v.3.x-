@@ -52,7 +52,7 @@ class ControllerExtensionAnalyticsPsGtm extends Controller
          * and sets consent using the `gcm_options` and `ads_data_redaction` and `url_passthrough` configurations.
          */
         if ($gcm_status) {
-            $gcm_options = [
+            $gcm_options = array(
                 'ad_storage' => $ad_storage ? 'granted' : 'denied',
                 'ad_user_data' => $ad_user_data ? 'granted' : 'denied',
                 'ad_personalization' => $ad_personalization ? 'granted' : 'denied',
@@ -60,7 +60,7 @@ class ControllerExtensionAnalyticsPsGtm extends Controller
                 'functionality_storage' => $functionality_storage ? 'granted' : 'denied',
                 'personalization_storage' => $personalization_storage ? 'granted' : 'denied',
                 'security_storage' => $security_storage ? 'granted' : 'denied',
-            ];
+            );
 
             if ($wait_for_update > 0) {
                 $gcm_options['wait_for_update'] = $wait_for_update;
