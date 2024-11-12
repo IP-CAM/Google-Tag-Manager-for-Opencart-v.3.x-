@@ -53,7 +53,7 @@
 							<div class="form-group required">
                 <label for="input-gtm-id" class="col-sm-2 control-label">{{ entry_gtm_id }}</label>
                 <div class="col-sm-10">
-                  <input type="text" name="analytics_ps_gtm_gtm_id" value="{{ analytics_ps_gtm_gtm_id }}" placeholder="{{ entry_gtm_id }}" id="input-gtm-id" class="form-control" />
+                  <input type="text" name="analytics_ps_gtm_gtm_id" value="{{ analytics_ps_gtm_gtm_id }}" placeholder="{{ entry_gtm_id }}" id="input-gtm-id" class="form-control">
 									{% if error_gtm_id %}<div class="text-danger">{{ error_gtm_id }}</div>{% endif %}
 									<div class="help-block text-muted">{{ help_gtm_id_locate }}</div>
                 </div>
@@ -222,7 +222,7 @@
 								<div class="form-group">
 									<label for="input-wait-for-update" class="col-sm-2 control-label">{{ entry_wait_for_update }}</label>
 									<div class="col-sm-10">
-										<input type="number" min="0" max="10000" name="analytics_ps_gtm_wait_for_update" value="{{ analytics_ps_gtm_wait_for_update | default('0') }}" placeholder="{{ entry_wait_for_update }}" id="input-wait-for-update" class="form-control" />
+										<input type="number" min="0" max="10000" name="analytics_ps_gtm_wait_for_update" value="{{ analytics_ps_gtm_wait_for_update | default('0') }}" placeholder="{{ entry_wait_for_update }}" id="input-wait-for-update" class="form-control">
 										{% if error_wait_for_update %}<div class="text-danger">{{ error_wait_for_update }}</div>{% endif %}
 										<div class="help-block text-muted">{{ help_wait_for_update }}</div>
 									</div>
@@ -267,16 +267,16 @@
 
 							<h3>{{ heading_getting_started }}</h3>
 							{{ text_getting_started }}
-							<hr />
+							<hr>
 							<h3>{{ heading_setup }}</h3>
 							{{ text_setup }}
-							<hr />
+							<hr>
 							<h3>{{ heading_troubleshot }}</h3>
 							{{ text_troubleshot }}
-							<hr />
+							<hr>
 							<h3>{{ heading_faq }}</h3>
 							{{ text_faq }}
-							<hr />
+							<hr>
 							<h3>{{ heading_contact }}</h3>
 							{{ text_contact }}
 
