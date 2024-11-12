@@ -36,7 +36,7 @@
             <div class="tab-pane active" id="tab-general">
 
 							<div class="form-group">
-								<label class="col-sm-2 control-label" for="input-status">{{ entry_status }}</label>
+								<label for="input-status" class="col-sm-2 control-label">{{ entry_status }}</label>
 								<div class="col-sm-10">
 									<select name="analytics_ps_gtm_status" id="input-status" class="form-control">
 										{% if analytics_ps_gtm_status %}
@@ -51,12 +51,10 @@
 							</div>
 
 							<div class="form-group required">
-                <label class="col-sm-2 control-label" for="input-gtm-id">{{ entry_gtm_id }}</label>
+                <label for="input-gtm-id" class="col-sm-2 control-label">{{ entry_gtm_id }}</label>
                 <div class="col-sm-10">
                   <input type="text" name="analytics_ps_gtm_gtm_id" value="{{ analytics_ps_gtm_gtm_id }}" placeholder="{{ entry_gtm_id }}" id="input-gtm-id" class="form-control" />
-									{% if error_gtm_id %}
-									<div class="text-danger">{{ error_gtm_id }}</div>
-									{% endif %}
+									{% if error_gtm_id %}<div class="text-danger">{{ error_gtm_id }}</div>{% endif %}
 									<div class="help-block text-muted">{{ help_gtm_id_locate }}</div>
                 </div>
               </div>
@@ -65,7 +63,7 @@
 						<div class="tab-pane" id="tab-gcm">
 
 							<div class="form-group">
-								<label class="col-sm-2 control-label" for="input-gcm-status">{{ entry_gcm_status }}</label>
+								<label for="input-gcm-status" class="col-sm-2 control-label">{{ entry_gcm_status }}</label>
 								<div class="col-sm-10">
 									<select name="analytics_ps_gtm_gcm_status" id="input-gcm-status" class="form-control">
 										{% if analytics_ps_gtm_gcm_status %}
@@ -81,7 +79,7 @@
 							</div>
 
 							<div class="form-group">
-								<label class="col-sm-2 control-label" for="input-gcm-profiles">{{ entry_gcm_profiles }}</label>
+								<label for="input-gcm-profiles" class="col-sm-2 control-label">{{ entry_gcm_profiles }}</label>
 								<div class="col-sm-10">
 									<select name="analytics_ps_gtm_gcm_profiles" id="input-gcm-profiles" class="form-control">
 										<option value="0"{% if analytics_ps_gtm_gcm_profiles == 0 %} selected{% endif %}>{{ entry_custom }}</option>
@@ -95,7 +93,7 @@
 								<legend>{{ text_group_ad_settings }}</legend>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="input-ad-storage">{{ entry_ad_storage }}</label>
+									<label for="input-ad-storage" class="col-sm-2 control-label">{{ entry_ad_storage }}</label>
 									<div class="col-sm-10">
 										<select name="analytics_ps_gtm_ad_storage" id="input-ad-storage" class="form-control">
 											{% if analytics_ps_gtm_ad_storage %}
@@ -111,7 +109,7 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="input-ad-user-data">{{ entry_ad_user_data }}</label>
+									<label for="input-ad-user-data" class="col-sm-2 control-label">{{ entry_ad_user_data }}</label>
 									<div class="col-sm-10">
 										<select name="analytics_ps_gtm_ad_user_data" id="input-ad-user-data" class="form-control">
 											{% if analytics_ps_gtm_ad_user_data %}
@@ -127,7 +125,7 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="input-ad-personalization">{{ entry_ad_personalization }}</label>
+									<label for="input-ad-personalization" class="col-sm-2 control-label">{{ entry_ad_personalization }}</label>
 									<div class="col-sm-10">
 										<select name="analytics_ps_gtm_ad_personalization" id="input-ad-personalization" class="form-control">
 											{% if analytics_ps_gtm_ad_personalization %}
@@ -148,7 +146,7 @@
 								<legend>{{ text_group_analytics_settings }}</legend>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="input-analytics-storage">{{ entry_analytics_storage }}</label>
+									<label for="input-analytics-storage" class="col-sm-2 control-label">{{ entry_analytics_storage }}</label>
 									<div class="col-sm-10">
 										<select name="analytics_ps_gtm_analytics_storage" id="input-analytics-storage" class="form-control">
 											{% if analytics_ps_gtm_analytics_storage %}
@@ -164,7 +162,7 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="input-functionality-storage">{{ entry_functionality_storage }}</label>
+									<label for="input-functionality-storage" class="col-sm-2 control-label">{{ entry_functionality_storage }}</label>
 									<div class="col-sm-10">
 										<select name="analytics_ps_gtm_functionality_storage" id="input-functionality-storage" class="form-control">
 											{% if analytics_ps_gtm_functionality_storage %}
@@ -180,7 +178,7 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="input-personalization-storage">{{ entry_personalization_storage }}</label>
+									<label for="input-personalization-storage" class="col-sm-2 control-label">{{ entry_personalization_storage }}</label>
 									<div class="col-sm-10">
 										<select name="analytics_ps_gtm_personalization_storage" id="input-personalization-storage" class="form-control">
 											{% if analytics_ps_gtm_personalization_storage %}
@@ -201,7 +199,7 @@
 								<legend>{{ text_group_security_settings }}</legend>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="input-security-storage">{{ entry_security_storage }}</label>
+									<label for="input-security-storage" class="col-sm-2 control-label">{{ entry_security_storage }}</label>
 									<div class="col-sm-10">
 										<select name="analytics_ps_gtm_security_storage" id="input-security-storage" class="form-control">
 											{% if analytics_ps_gtm_security_storage %}
@@ -222,18 +220,16 @@
 								<legend>{{ text_group_advanced_settings }}</legend>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="input-wait-for-update">{{ entry_wait_for_update }}</label>
+									<label for="input-wait-for-update" class="col-sm-2 control-label">{{ entry_wait_for_update }}</label>
 									<div class="col-sm-10">
 										<input type="number" min="0" max="10000" name="analytics_ps_gtm_wait_for_update" value="{{ analytics_ps_gtm_wait_for_update | default('0') }}" placeholder="{{ entry_wait_for_update }}" id="input-wait-for-update" class="form-control" />
-										{% if error_wait_for_update %}
-										<div class="text-danger">{{ error_wait_for_update }}</div>
-										{% endif %}
+										{% if error_wait_for_update %}<div class="text-danger">{{ error_wait_for_update }}</div>{% endif %}
 										<div class="help-block text-muted">{{ help_wait_for_update }}</div>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="input-ads-data-redaction">{{ entry_ads_data_redaction }}</label>
+									<label for="input-ads-data-redaction" class="col-sm-2 control-label">{{ entry_ads_data_redaction }}</label>
 									<div class="col-sm-10">
 										<select name="analytics_ps_gtm_ads_data_redaction" id="input-ads-data-redaction" class="form-control">
 											{% if analytics_ps_gtm_ads_data_redaction %}
@@ -249,7 +245,7 @@
 								</div>
 
 								<div class="form-group">
-									<label class="col-sm-2 control-label" for="input-url-passthrough">{{ entry_url_passthrough }}</label>
+									<label for="input-url-passthrough" class="col-sm-2 control-label">{{ entry_url_passthrough }}</label>
 									<div class="col-sm-10">
 										<select name="analytics_ps_gtm_url_passthrough" id="input-url-passthrough" class="form-control">
 											{% if analytics_ps_gtm_url_passthrough %}
