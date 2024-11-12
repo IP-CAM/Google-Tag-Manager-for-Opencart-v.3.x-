@@ -296,13 +296,13 @@
 			$(this).prop('selectedIndex', 1);
 		});
 
-		var selectedValue = $(this).val();
+		var selectedValue = parseInt($(this).val());
 
-		if (selectedValue === '1') { // Strict
+		if (selectedValue === 1) { // Strict
 			$('#input-functionality-storage').prop('selectedIndex', 0);
 			$('#input-personalization-storage').prop('selectedIndex', 0);
 			$('#input-security-storage').prop('selectedIndex', 0);
-		} else if (selectedValue === '2') { // Balanced
+		} else if (selectedValue === 2) { // Balanced
 			$('#input-ad-storage').prop('selectedIndex', 0);
 			$('#input-ad-user-data').prop('selectedIndex', 0);
 			$('#input-analytics-storage').prop('selectedIndex', 0);

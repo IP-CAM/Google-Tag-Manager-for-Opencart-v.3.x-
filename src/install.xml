@@ -14,7 +14,7 @@ code package and also available on the project page: https://github.com/playfuls
         <operation>
             <search position="after"><![CDATA[$data['analytics'] = array();]]></search>
             <add><![CDATA[
-$data['ps_gtm_status'] = $this->config->get('analytics_ps_gtm_status');
+$data['ps_gtm_status'] = (bool) $this->config->get('analytics_ps_gtm_status');
 $data['ps_gtm_gtm_id'] = $this->config->get('analytics_ps_gtm_gtm_id');
             ]]></add>
         </operation>

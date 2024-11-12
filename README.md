@@ -30,6 +30,7 @@ Google Tag Manager (GTM) is a free tool that helps you manage and deploy marketi
 5. Navigate to `Extensions > Extensions` and select `Analytics` from the `Choose the extension type` dropdown list.
 6. Locate the extension in the `Analytics` list and click the `Install` button.
 7. Click the `Edit` button, configure the extension parameters, and click the `Save` button to save your settings.
+8. Navigate to `Extensions > Modifications`, select all your modifications and click the `Refresh` button to update the modification cache and apply the changes.
 
 ---
 
