@@ -46,6 +46,12 @@ Features
   Español (es-es), Français (fr-fr), Magyar (hu-hu), Italiano (it-it),
   Русский (ru-ru), and Slovenčina (sk-sk).
 
+For more information, visit the extension's GitHub page
+at https://github.com/playfulsparkle/oc3_gtm.git.
+
+Demo frontend: https://opencart3.playfulsparkle.com/
+Demo backend: https://opencart3.playfulsparkle.com/admin/
+
 Installation Instructions
 
 1. Download the latest version from the OpenCart Marketplace.
