@@ -12,21 +12,25 @@ code package and also available on the project page: https://github.com/playfuls
     <link>https://github.com/playfulsparkle/oc3_gtm.git</link>
     <file path="catalog/controller/common/header.php">
         <operation>
-            <search position="after"><![CDATA[$data['analytics'] = array();]]></search>
-            <add><![CDATA[
-$data['ps_gtm_status'] = (bool) $this->config->get('analytics_ps_gtm_status');
-$data['ps_gtm_gtm_id'] = $this->config->get('analytics_ps_gtm_gtm_id');
+            <search><![CDATA[$data['analytics'] = array();]]></search>
+            <add position="after"><![CDATA[
+                $data['ps_gtm_status'] = (bool) $this->config->get('analytics_ps_gtm_status');
+                $data['ps_gtm_gtm_id'] = $this->config->get('analytics_ps_gtm_gtm_id');
             ]]></add>
         </operation>
     </file>
     <file path="catalog/view/theme/default/template/common/header.twig">
         <operation>
             <search><![CDATA[<body>]]></search>
-            <add position="after"><![CDATA[{% if ps_gtm_status %}<!-- Google Tag Manager (noscript) -->
-<noscript>
-<iframe src="https://www.googletagmanager.com/ns.html?id={{ ps_gtm_gtm_id }}" height="0" width="0" style="display:none; visibility:hidden;"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->{% endif %}]]></add>
+            <add position="after"><![CDATA[
+    {% if ps_gtm_status %}
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id={{ ps_gtm_gtm_id }}" height="0" width="0" style="display:none; visibility:hidden;"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    {% endif %}
+            ]]></add>
         </operation>
     </file>
 </modification>
