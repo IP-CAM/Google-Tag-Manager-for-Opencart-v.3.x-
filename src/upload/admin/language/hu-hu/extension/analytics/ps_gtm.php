@@ -38,8 +38,8 @@ $_['entry_analytics_storage']       = 'Analitika tárolása';
 $_['entry_functionality_storage']   = 'Funkcionalitás tárolása';
 $_['entry_personalization_storage'] = 'Személyre szabás tárolása';
 $_['entry_security_storage']        = 'Biztonsági tárolás';
-$_['entry_wait_for_update']         = 'Frissítés várakozása';
-$_['entry_ads_data_redaction']      = 'Hirdetési adatok eltakarása';
+$_['entry_wait_for_update']         = 'Várakozás frissítésre';
+$_['entry_ads_data_redaction']      = 'Hirdetési adatok visszatartása';
 $_['entry_url_passthrough']         = 'URL továbbítás';
 $_['entry_strict']                  = 'Szigorú';
 $_['entry_balanced']                = 'Kiegyensúlyozott';
@@ -55,10 +55,10 @@ $_['help_functionality_storage']    = 'Lehetővé teszi az adatok tárolását a
 $_['help_personalization_storage']  = 'Szabályozza a felhasználói élmény személyre szabásához szükséges adatok tárolását, például tartalom vagy ajánlások személyre szabását.';
 $_['help_security_storage']         = 'Biztosítja a biztonsággal kapcsolatos adatok tárolását, beleértve a csalásmegelőzést és a biztonságos hozzáférés-ellenőrzést.';
 $_['help_wait_for_update']          = 'Beállítja azt az időt (ezredmásodpercben), amelyet a hozzájárulási állapot frissítése előtt várni kell, ezzel biztosítva, hogy minden beállítás alkalmazva legyen.';
-$_['help_ads_data_redaction']       = 'Eltakarja a hirdetésekkel kapcsolatos felhasználói adatokat, ezáltal védve a felhasználók magánéletét és elrejtve a személyazonosításra alkalmas információkat.';
+$_['help_ads_data_redaction']       = 'Visszatartja a hirdetésekkel kapcsolatos felhasználói adatokat, ezáltal védve a felhasználók magánéletét és elrejtve a személyazonosításra alkalmas információkat.';
 $_['help_url_passthrough']          = 'Lehetővé teszi, hogy az URL átmenjen a hozzájárulási ellenőrzéseken, ami segíti a konkrét felhasználói útvonalak nyomkövetését anélkül, hogy személyes adatokat tárolna.';
 $_['help_gcm_status']               = 'Engedélyezi a Google Hozzájárulás Módot (GCM), lehetővé téve az Ön weboldala számára, hogy alkalmazkodjon a felhasználói hozzájárulási beállításokhoz a Google címkék viselkedésének megváltoztatásával. Ez a mód adatvédelmi szempontból barátságos nyomkövetést tesz lehetővé, biztosítva az analitikai és hirdetési funkciók összhangját a hozzájárulási preferenciákkal.';
-$_['help_gtm_id_locate']            = 'A Measurement ID-jének megkereséséhez jelentkezzen be a <a href="https://tagmanager.google.com" target="_blank" rel="noopener noreferrer">Google Tag Manager fiókjába</a>. A munkaterületen keresse meg az azonosítót a vezérlőpulton "GTM-" előtaggal kezdődik, amelyet egyedi betűk és számok követnek, például "GTM-XXXXXXXX". <a href="https://support.google.com/analytics/answer/12270356?hl=hu" target="_blank" rel="external noopener noreferrer">További részletes utasítások itt</a>.';
+$_['help_gtm_id_locate']            = 'A Measurement ID azonosítót a <a href="https://tagmanager.google.com" target="_blank" rel="external noopener noreferrer">Google Tag Manager fiókjában</a> találhatja meg a munkaterület irányítópultjának tetején. Az azonosító "GTM-" betűkkel kezdődik, amelyet betűk és számok egyedi kombinációja követ, például "GTM-XXXXXXXX". <a href="https://support.google.com/analytics/answer/12270356?hl=hu" target="_blank" rel="external noopener noreferrer">Részletes útmutató itt</a>.';
 
 
 // Error

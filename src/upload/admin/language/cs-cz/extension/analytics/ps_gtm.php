@@ -47,18 +47,18 @@ $_['entry_custom']                  = 'Vlastní';
 $_['entry_gcm_profiles']            = 'Profily GCM';
 
 // Help
-$_['help_ad_storage']               = 'Ovládá, zda je povoleno ukládání údajů pro reklamní účely, jako je sledování kliknutí na reklamy nebo konverze.';
-$_['help_ad_user_data']             = 'Určuje, zda jsou ukládána data o uživatelích interagujících s reklamami, což zlepšuje schopnosti cílení reklam.';
-$_['help_ad_personalization']       = 'Umožňuje personalizaci reklam na základě údajů o uživatelích, což poskytuje uživatelům relevantnější reklamy.';
-$_['help_analytics_storage']        = 'Povoluje ukládání dat používaných pro analytické účely, což pomáhá sledovat výkon webu a chování uživatelů.';
-$_['help_functionality_storage']    = 'Umožňuje ukládání dat na podporu funkcionality, jako jsou uživatelské preference nebo funkce webu, které zlepšují uživatelský zážitek.';
-$_['help_personalization_storage']  = 'Ovládá ukládání dat pro personalizaci uživatelského zážitku, například doporučený obsah nebo nastavení.';
-$_['help_security_storage']         = 'Zajišťuje ukládání údajů souvisejících se zabezpečením, například pro prevenci podvodů a zabezpečení přístupu.';
-$_['help_wait_for_update']          = 'Nastaví čas (v milisekundách), který se má počkat před aktualizací stavu souhlasu, aby se zajistilo, že jsou všechna nastavení použita.';
-$_['help_ads_data_redaction']       = 'Rediguje uživatelská data související s reklamami a zajišťuje ochranu soukromí skrytím určitých identifikovatelných informací.';
-$_['help_url_passthrough']          = 'Umožňuje URL projít kontrolami souhlasu, což je užitečné pro sledování specifických uživatelských cest bez ukládání osobních údajů.';
-$_['help_gcm_status']               = 'Povoluje režim Google Consent, což umožňuje vaší stránce přizpůsobit chování Google značek na základě nastavení souhlasu uživatelů. Tento režim poskytuje sledování šetrné k ochraně soukromí a umožňuje, aby analytika a reklamy fungovaly v souladu s preferencemi souhlasu.';
-$_['help_gtm_id_locate']            = 'Chcete-li najít své Measurement ID, přihlaste se do svého <a href="https://tagmanager.google.com" target="_blank" rel="external noopener noreferrer">účtu Google Tag Manager</a>. V pracovním prostoru hledejte ID na vrchu panelu - začíná "GTM-" následovaným unikátní sérií písmen a číslic, například "GTM-XXXXXXXX". <a href="https://support.google.com/analytics/answer/12270356?hl=cs" target="_blank" rel="external noopener noreferrer">Podrobnější pokyny naleznete zde</a>.';
+$_['help_ad_storage']               = 'Určuje, zda mohou být ukládána data pro účely související s reklamami, například sledování kliknutí nebo konverzí.';
+$_['help_ad_user_data']             = 'Povoluje ukládání dat o uživatelích interagujících s reklamami pro zlepšení cílení reklam.';
+$_['help_ad_personalization']       = 'Povoluje personalizaci reklam na základě uživatelských dat.';
+$_['help_analytics_storage']        = 'Povoluje ukládání dat pro analytické účely, například sledování výkonu webu.';
+$_['help_functionality_storage']    = 'Umožňuje ukládání dat podporujících funkčnost webu, například uživatelských preferencí.';
+$_['help_personalization_storage']  = 'Umožňuje ukládání dat pro personalizaci uživatelského zážitku, například doporučeného obsahu.';
+$_['help_security_storage']         = 'Povoluje ukládání dat pro zabezpečení, například ochranu proti podvodům.';
+$_['help_wait_for_update']          = 'Určuje čas (v milisekundách) pro vyčkání před aktualizací stavu souhlasu.';
+$_['help_ads_data_redaction']       = 'Anonymizuje uživatelská data související s reklamami pro ochranu soukromí.';
+$_['help_url_passthrough']          = 'Povoluje, aby URL prošly kontrolami souhlasu, aniž by byly ukládány osobní údaje.';
+$_['help_gcm_status']               = 'Povoluje Google režim souhlasu, přizpůsobující chování značek podle uživatelských preferencí.';
+$_['help_gtm_id_locate']            = 'Chcete-li najít své ID měření pro <a href="https://tagmanager.google.com" target="_blank" rel="external noopener noreferrer">Google Tag Manager</a>, podívejte se do horní části panelu pracovního prostoru. ID začíná písmeny "GTM-" následovanými unikátní kombinací písmen a čísel, například "GTM-XXXXXXXX". <a href="https://support.google.com/analytics/answer/12270356?hl=cs" target="_blank" rel="external noopener noreferrer">Podrobnější návod zde</a>.';
 
 // Error
 $_['error_permission']              = 'Upozornění: Nemáte oprávnění upravovat nastavení Google Tag Manageru!';
