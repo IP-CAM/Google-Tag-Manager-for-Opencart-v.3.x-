@@ -75,9 +75,9 @@ class ControllerExtensionAnalyticsPsGtm extends Controller
         }
 
         if (isset($this->request->post['analytics_ps_gtm_gtm_id'])) {
-            $data['analytics_ps_gtm_gtm_id'] = $this->request->post['analytics_ps_gtm_gtm_id'];
+            $data['analytics_ps_gtm_gtm_id'] = (string) $this->request->post['analytics_ps_gtm_gtm_id'];
         } else {
-            $data['analytics_ps_gtm_gtm_id'] = $this->model_setting_setting->getSettingValue('analytics_ps_gtm_gtm_id', $this->request->get['store_id']);
+            $data['analytics_ps_gtm_gtm_id'] = (string) $this->model_setting_setting->getSettingValue('analytics_ps_gtm_gtm_id', $this->request->get['store_id']);
         }
 
         if (isset($this->request->post['analytics_ps_gtm_gcm_status'])) {
