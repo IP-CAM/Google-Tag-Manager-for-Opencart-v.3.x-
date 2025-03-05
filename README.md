@@ -2,9 +2,9 @@
 
 The **Playful Sparkle - Google Tag Manager** extension for OpenCart 3.x+ makes integrating **Google Tag Manager (GTM)** into your OpenCart eCommerce store a breeze. With its no-code setup, simply enter your Google GTM **Measurement ID**, and the tracking code is automatically added to your site. This allows seamless tracking and data collection for various services like Google Ads, Google Analytics, and more, all without the need for coding knowledge. Additionally, the extension supports **Google Consent Mode (GCM)**, offering customizable privacy settings for your visitors, where you can easily manage data storage preferences and consent profiles, including options for **Ads Data Redaction** and **URL Passthrough**, among others.
 
-**Introduction to Google Tag Manager**
+## About Google Tag Manager
 
-Google Tag Manager (GTM) is a free tool that helps you manage and deploy marketing tags (such as analytics and tracking codes) on your website without needing to modify the code directly. It enables marketers and developers to update measurement codes and track key performance metrics in real-time, simplifying website management. By using GTM, you can add and update various tags from services like Google Ads, Google Analytics, and more, without the hassle of changing the website code every time you need an update. This extension automates the process, ensuring your store is GTM-ready with minimal effort.
+**Google Tag Manager (GTM)** is a free tool that helps you manage and deploy marketing tags (such as analytics and tracking codes) on your website without needing to modify the code directly. It enables marketers and developers to update measurement codes and track key performance metrics in real-time, simplifying website management. By using GTM, you can add and update various tags from services like Google Ads, Google Analytics, and more, without the hassle of changing the website code every time you need an update. This extension automates the process, ensuring your store is GTM-ready with minimal effort.
 
 ---
 

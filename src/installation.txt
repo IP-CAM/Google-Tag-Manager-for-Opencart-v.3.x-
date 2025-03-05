@@ -11,7 +11,7 @@ customizable privacy settings for your visitors, where you can easily manage
 data storage preferences and consent profiles, including options for
 Ads Data Redaction and URL Passthrough, among others.
 
-Introduction to Google Tag Manager
+About Google Tag Manager
 
 Google Tag Manager (GTM) is a free tool that helps you manage and deploy
 marketing tags (such as analytics and tracking codes) on your website without
