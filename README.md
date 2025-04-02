@@ -1,23 +1,48 @@
 # Playful Sparkle - Google Tag Manager for OpenCart 3
 
-The **Playful Sparkle - Google Tag Manager** extension for OpenCart 3.x+ makes integrating **Google Tag Manager (GTM)** into your OpenCart eCommerce store a breeze. With its no-code setup, simply enter your Google GTM **Measurement ID**, and the tracking code is automatically added to your site. This allows seamless tracking and data collection for various services like Google Ads, Google Analytics, and more, all without the need for coding knowledge. Additionally, the extension supports **Google Consent Mode (GCM)**, offering customizable privacy settings for your visitors, where you can easily manage data storage preferences and consent profiles, including options for **Ads Data Redaction** and **URL Passthrough**, among others.
+The **Playful Sparkle - Google Tag Manager** extension for OpenCart 3.x+ seamlessly integrates **Google Tag Manager (GTM)** into your OpenCart eCommerce store without requiring any coding knowledge. Simply enter your **GTM Measurement ID**, and the tracking code is automatically injected into your site. This enables precise tracking and data collection for services such as **Google Ads**, **Google Analytics**, and other marketing tools.
+
+This extension fully supports **Google Consent Mode V2**, which enhances privacy compliance by allowing websites to adjust tracking behavior based on user consent. Unlike the previous version, which only handled basic ad and analytics storage permissions, Consent Mode V2 expands consent signals to include **ad user data** and **ad personalization preferences**.
+
+To make use of these consent settings, you must install a separate [Cookie Consent Banner](https://www.opencart.com/index.php?route=marketplace/extension&filter_search=cookie%20consent%20banner) to collect user choices. The extension automatically configures GTM to respect these choices by dynamically setting consent states for **ad storage**, **analytics storage**, **security storage**, **functionality storage**, **personalization storage**, and **ads data redaction**.
+
+Additionally, it supports **URL Passthrough** and allows setting a **wait_for_update** delay to defer tracking until consent is granted.
+
+This ensures compliance with **GDPR**, **ePrivacy**, and other data regulations while maintaining effective analytics and ad tracking without slowing down your site.
+
+This extension **does not** track **Enhanced eCommerce events** or **ad conversions** it only configures **default consent settings** for Google Tag Manager. If you require **Enhanced eCommerce event tracking** or **Google Ads conversion tracking**, you will need an additional extension such as [Google Analytics (GA4)/Ads Conversion Enhanced Measurement](https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=46693) for OpenCart 4.x+.
+
 
 ## About Google Tag Manager
 
-**Google Tag Manager (GTM)** is a free tool that helps you manage and deploy marketing tags (such as analytics and tracking codes) on your website without needing to modify the code directly. It enables marketers and developers to update measurement codes and track key performance metrics in real-time, simplifying website management. By using GTM, you can add and update various tags from services like Google Ads, Google Analytics, and more, without the hassle of changing the website code every time you need an update. This extension automates the process, ensuring your store is GTM-ready with minimal effort.
+**Google Tag Manager (GTM)** is a free tool that helps you manage marketing tags (like analytics and tracking codes) on your website without needing to touch the code. It lets marketers and developers add, update, and manage tags in real-time, without the hassle of modifying the website code every time you want to update or add a tag.
+
+With GTM, you can easily integrate services like **Google Ads**, **Google Analytics**, and other marketing tools. This extension simplifies the process by automatically setting up GTM on your OpenCart store, so it's ready to track key metrics with minimal effort.
+
+---
+
+## About Google Consent Mode V2
+
+**Google Consent Mode V2** is a feature designed to help websites comply with privacy regulations like **GDPR** by adjusting tracking behavior based on user consent.
+
+In **Consent Mode V1**, you could only manage basic tracking permissions, such as **ad storage** and **analytics storage**. However, **Consent Mode V2** extends these capabilities, allowing websites to also manage consent for **ad user data** and **ad personalization preferences**.
+
+The main difference is that V2 offers more granular control over user consent. With **Consent Mode V2**, you can set consent preferences for multiple types of data (such as ad storage, analytics storage, and personalization storage) and configure more privacy-conscious features like **ads data redaction** and **URL passthrough**.
+
+To use Consent Mode V2, you must install a separate **cookie consent banner** to collect user preferences. Once the user provides consent, the extension automatically applies the selected settings to Google Tag Manager, ensuring compliant tracking across your store.
 
 ---
 
 ## Features
 
-- **No-code Integration**: Effortless setup—just insert your Google Tag Manager Measurement ID, and the tracking code is added automatically.
-- **Google Consent Mode (GCM)**: Includes support for Google Consent Mode, allowing you to manage consent preferences for data storage and tracking.
-- **Customizable Consent Profiles**: Choose from pre-configured GCM profiles (Custom, Strict, Balanced) and freely customize consent options like Ad Storage, Ad User Data, Analytics Storage, and more.
-- **Ads Data Redaction**: Enable or disable Ads Data Redaction to control data sharing and privacy.
-- **URL Passthrough**: Option to manage URL Passthrough to streamline tag firing and tracking.
-- **Compatibility**: Integrates smoothly with OpenCart 3.x+, supporting a range of online store setups.
-- **Multi-store Support**: Supports multi-store setups by default, making it easy to integrate across multiple OpenCart stores.
-- **Multilingual Support**: Ready for international use with languages including Čeština (cs-cz), Deutsch (de-de), English (GB) (en-gb), English (US) (en-us), Español (es-es), Français (fr-fr), Magyar (hu-hu), Italiano (it-it), Русский (ru-ru), Ελληνικά (el-GR), العربية (ar), Polski (pl-pl), and Slovenčina (sk-sk).
+- **No-code Integration:** Effortless setup—just insert your Google Tag Manager Measurement ID, and the tracking code is added automatically.
+- **Google Consent Mode V2:** Supports Google Consent Mode V2, allowing you to manage user consent for data storage, ad personalization, and analytics tracking.
+- **Consent Management Compatibility:** Requires a separate cookie consent banner to collect user choices and automatically applies consent preferences to GTM.
+- **Ads Data Redaction:** Supports Ads Data Redaction to enhance privacy by limiting the transmission of identifiable ad data.
+- **URL Passthrough:** Enables URL Passthrough to help preserve tracking information when users navigate across pages.
+- **Multi-store Support:** Works seamlessly with OpenCart’s multi-store functionality, allowing easy integration across multiple stores.
+- **Compatibility:** Fully compatible with OpenCart 3.x+.
+- **Multilingual Support:** Ready for international use with languages including Čeština (cs-cz), Deutsch (de-de), English (GB) (en-gb), English (US) (en-us), Español (es-es), Français (fr-fr), Magyar (hu-hu), Italiano (it-it), Русский (ru-ru), Ελληνικά (el-GR), العربية (ar), Polski (pl-pl), and Slovenčina (sk-sk).
 
 ---
 
