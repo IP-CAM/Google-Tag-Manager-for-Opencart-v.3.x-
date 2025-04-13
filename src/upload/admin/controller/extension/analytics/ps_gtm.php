@@ -22,6 +22,8 @@ class ControllerExtensionAnalyticsPsGtm extends Controller
         $this->load->model('setting/setting');
 
         if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
+            $this->request->post['analytics_ps_gtm_gtm_id'] = strtoupper($this->request->post['analytics_ps_gtm_gtm_id']);
+
             $this->model_setting_setting->editSetting('analytics_ps_gtm', $this->request->post, $this->request->get['store_id']);
 
             $this->session->data['success'] = $this->language->get('text_success');
@@ -196,7 +198,7 @@ class ControllerExtensionAnalyticsPsGtm extends Controller
         if (!$this->error) {
             if (empty($this->request->post['analytics_ps_gtm_gtm_id'])) {
                 $this->error['gtm_id'] = $this->language->get('error_gtm_id');
-            } elseif (preg_match('/^GTM-[A-Z0-9]{7,8}$/', $this->request->post['analytics_ps_gtm_gtm_id']) !== 1) {
+            } elseif (preg_match('/^GTM-[A-Z0-9]{6,8}$/', strtoupper($this->request->post['analytics_ps_gtm_gtm_id'])) !== 1) {
                 $this->error['gtm_id'] = $this->language->get('error_gtm_id_invalid');
             }
 
