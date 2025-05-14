@@ -40,12 +40,13 @@ class ControllerExtensionAnalyticsPsGtm extends Controller
             }
 
             $default_consent_json = json_encode($default_consent);
-            $ads_data_redaction_str = $ads_data_redaction ? 'granted' : 'denied'; // Upgrade to consent mode v2
-            $url_passthrough_str = $url_passthrough ? 'granted' : 'denied'; // Upgrade to consent mode v2
+
+            $ads_data_redaction_str = $ads_data_redaction ? 'true' : 'false'; // Upgrade to consent mode v2
+            $url_passthrough_str = $url_passthrough ? 'true' : 'false'; // Upgrade to consent mode v2
 
             $html .= PHP_EOL . "gtag('consent', 'default', " . $default_consent_json . ");" . PHP_EOL;
-            $html .= "gtag('set', 'ads_data_redaction', '" . $ads_data_redaction_str . "');" . PHP_EOL;
-            $html .= "gtag('set', 'url_passthrough', '" . $url_passthrough_str . "');" . PHP_EOL;
+            $html .= "gtag('set', 'ads_data_redaction', " . $ads_data_redaction_str . ");" . PHP_EOL;
+            $html .= "gtag('set', 'url_passthrough', " . $url_passthrough_str . ");" . PHP_EOL;
         }
 
         $html .= "</script>" . PHP_EOL;
